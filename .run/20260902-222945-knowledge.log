@@ -1,0 +1,21 @@
+2026-09-02 22:29:47.904  INFO 5836 --- [main] c.a.n.client.env.SearchableProperties    : properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2026-09-02 22:29:48.023  INFO 5836 --- [main] c.k.a.k.KnowflowKnowledgeApplication     : Starting KnowflowKnowledgeApplication v1.0.0-SNAPSHOT using Java 1.8.0_201 on sqs-computer with PID 5836 (D:\workspaces\java\knowflow-ai\knowflow-knowledge\target\knowflow-knowledge-1.0.0-SNAPSHOT.jar started by sqs in D:\workspaces\java\knowflow-ai)
+2026-09-02 22:29:48.024  INFO 5836 --- [main] c.k.a.k.KnowflowKnowledgeApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-09-02 22:29:48.626  INFO 5836 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=38312f3d-b0d6-3fd6-95b5-fd6d12da98f3
+2026-09-02 22:29:49.592  INFO 5836 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2026-09-02 22:29:49.598  INFO 5836 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-02 22:29:49.598  INFO 5836 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+2026-09-02 22:29:49.671  INFO 5836 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-02 22:29:49.672  INFO 5836 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1587 ms
+2026-09-02 22:29:49.917  INFO 5836 --- [main] c.a.c.sentinel.SentinelWebMvcConfigurer  : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2026-09-02 22:29:51.788  INFO 5836 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-09-02 22:29:55.099  INFO 5836 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-09-02 22:29:55.209  INFO 5836 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2026-09-02 22:29:55.270  INFO 5836 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2026-09-02 22:29:55.274  INFO 5836 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2026-09-02 22:29:57.646  INFO 5836 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP knowflow-knowledge 192.168.177.1:8082 register finished
+2026-09-02 22:29:59.239  INFO 5836 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-09-02 22:29:59.246  INFO 5836 --- [main] c.k.a.k.KnowflowKnowledgeApplication     : Started KnowflowKnowledgeApplication in 13.258 seconds (JVM running for 13.604)
+2026-09-02 22:30:22.453  INFO 5836 --- [http-nio-8082-exec-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-02 22:30:22.453  INFO 5836 --- [http-nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-02 22:30:22.453  INFO 5836 --- [http-nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms

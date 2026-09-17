@@ -1,0 +1,45 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: knowflow-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${NACOS_SERVER_ADDR:127.0.0.1:8848}
+    sentinel:
+      eager: true
+      log:
+        dir: ${SENTINEL_LOG_DIR:${java.io.tmpdir}/knowflow-sentinel}
+        switch-pid: true
+      transport:
+        dashboard: ${SENTINEL_DASHBOARD_ADDR:127.0.0.1:8858}
+        port: ${SENTINEL_TRANSPORT_PORT:8719}
+      filter:
+        enabled: false
+    gateway:
+      routes:
+        - id: knowflow-auth
+          uri: lb://knowflow-auth
+          predicates:
+            - Path=/api/auth/**
+          filters:
+            - StripPrefix=2
+        - id: knowflow-knowledge
+          uri: lb://knowflow-knowledge
+          predicates:
+            - Path=/api/knowledge/**
+          filters:
+            - StripPrefix=2
+        - id: knowflow-ai-service
+          uri: lb://knowflow-ai-service
+          predicates:
+            - Path=/api/ai/**
+          filters:
+            - StripPrefix=2
+
+knowflow:
+  security:
+    jwt:
+      secret: ${JWT_SECRET:a25vd2Zsb3ctbG9jYWwtZGV2ZWxvcG1lbnQtand0LXNlY3JldC1jaGFuZ2UtbWUtMjAyNg==}

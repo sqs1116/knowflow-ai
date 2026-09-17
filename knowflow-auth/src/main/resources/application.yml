@@ -1,0 +1,37 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: knowflow-auth
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: "${MYSQL_URL:jdbc:mysql://114.55.13.136:3306/knowflow_auth?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true}"
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:sqs@YH718369553}
+  sql:
+    init:
+      mode: always
+      encoding: UTF-8
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${NACOS_SERVER_ADDR:127.0.0.1:8848}
+    sentinel:
+      eager: true
+      log:
+        dir: ${SENTINEL_LOG_DIR:${java.io.tmpdir}/knowflow-sentinel}
+        switch-pid: true
+      transport:
+        dashboard: ${SENTINEL_DASHBOARD_ADDR:127.0.0.1:8858}
+        port: ${SENTINEL_TRANSPORT_PORT:8720}
+
+knowflow:
+  security:
+    jwt:
+      secret: ${JWT_SECRET:a25vd2Zsb3ctbG9jYWwtZGV2ZWxvcG1lbnQtand0LXNlY3JldC1jaGFuZ2UtbWUtMjAyNg==}
+      expiration-seconds: ${JWT_EXPIRATION_SECONDS:7200}
+  bootstrap:
+    admin:
+      username: ${KNOWFLOW_ADMIN_USERNAME:admin}
+      password: ${KNOWFLOW_ADMIN_PASSWORD:123456}

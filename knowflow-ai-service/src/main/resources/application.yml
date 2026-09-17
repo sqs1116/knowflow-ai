@@ -1,0 +1,44 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: knowflow-ai-service
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:114.55.13.136:9092}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      acks: all
+    consumer:
+      group-id: ${KAFKA_CONSUMER_GROUP_ID:knowflow-knowledge-group}
+      enable-auto-commit: false
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    listener:
+      ack-mode: manual_immediate
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${NACOS_SERVER_ADDR:114.55.13.136:8848}
+    sentinel:
+      eager: true
+      log:
+        dir: ${SENTINEL_LOG_DIR:${java.io.tmpdir}/knowflow-sentinel}
+        switch-pid: true
+      transport:
+        dashboard: ${SENTINEL_DASHBOARD_ADDR:114.55.13.136:8858}
+        port: ${SENTINEL_TRANSPORT_PORT:8722}
+  redis:
+    host: 114.55.13.136
+    port: 6379
+    password: ${REDIS_PASSWORD:sqs@YH718369553}
+    database: 0
+
+feign:
+  sentinel:
+    enabled: true
+knowflow:
+  kafka:
+    topic: ${KAFKA_TOPIC:knowflow-knowledge-events}

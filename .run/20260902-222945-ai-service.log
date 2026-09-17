@@ -1,0 +1,23 @@
+2026-09-02 22:29:47.903  INFO 14768 --- [main] c.a.n.client.env.SearchableProperties    : properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2026-09-02 22:29:48.026  INFO 14768 --- [main] c.k.a.s.KnowflowAiServiceApplication     : Starting KnowflowAiServiceApplication v1.0.0-SNAPSHOT using Java 1.8.0_201 on sqs-computer with PID 14768 (D:\workspaces\java\knowflow-ai\knowflow-ai-service\target\knowflow-ai-service-1.0.0-SNAPSHOT.jar started by sqs in D:\workspaces\java\knowflow-ai)
+2026-09-02 22:29:48.028  INFO 14768 --- [main] c.k.a.s.KnowflowAiServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-09-02 22:29:48.733  INFO 14768 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=309ed05c-19d6-3532-b43e-168e22f495ed
+2026-09-02 22:29:49.683  INFO 14768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2026-09-02 22:29:49.689  INFO 14768 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-02 22:29:49.689  INFO 14768 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+2026-09-02 22:29:49.794  INFO 14768 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-02 22:29:49.794  INFO 14768 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1662 ms
+2026-09-02 22:29:49.996  INFO 14768 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'knowflow-knowledge' URL not provided. Will try picking an instance via load-balancing.
+2026-09-02 22:29:50.343  INFO 14768 --- [main] c.a.c.sentinel.SentinelWebMvcConfigurer  : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2026-09-02 22:29:52.016  INFO 14768 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-09-02 22:29:55.255  INFO 14768 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-09-02 22:29:55.337  WARN 14768 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-09-02 22:29:55.570  INFO 14768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+2026-09-02 22:29:55.616  INFO 14768 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2026-09-02 22:29:55.616  INFO 14768 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2026-09-02 22:29:57.646  INFO 14768 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP knowflow-ai-service 192.168.177.1:8083 register finished
+2026-09-02 22:29:59.254  INFO 14768 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-09-02 22:29:59.258  INFO 14768 --- [main] c.k.a.s.KnowflowAiServiceApplication     : Started KnowflowAiServiceApplication in 13.243 seconds (JVM running for 13.611)
+2026-09-02 22:30:22.544  INFO 14768 --- [http-nio-8083-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-02 22:30:22.544  INFO 14768 --- [http-nio-8083-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-02 22:30:22.545  INFO 14768 --- [http-nio-8083-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
